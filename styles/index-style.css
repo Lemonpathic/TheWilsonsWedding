@@ -1,15 +1,16 @@
 body{
-    background: seagreen;
+    background: #A9BD93;
 
 }
 h1{
     font-size:75px;
     position: relative;
-    top: 15vh;
+    top: 0vh;
     text-align: center;
 }
 .registry-title{
     padding-top: 0px;
+    color: #2c2c2c;
 }
 .container {
     display: grid;
@@ -18,24 +19,39 @@ h1{
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
 }
-
+.rsvp-box {
+    font-size: larger;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #FFFCF2;
+    text-decoration: none;
+    color: #2c2c2c;
+    margin-top: 0; /* Adjust as needed */
+    padding: 10px; /* Adjust as needed */
+  }
+  
 .box {
     width: 220px;
   height: 220px;
-  background-color: #FFFDD0;
-  border: 10px solid #FFFDD0;
+  background-color: #FFFCF2;
+  border: 10px solid #FFFCF2;
   border-radius: 5%;
   position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px; /* add this */
+  margin: 0 auto 200px; /* add this */
+}
+.box p {
+    display: none;
 }
 
 .box:hover img {
     display: none;
 }
+
 
 .box:hover::before {
     content: attr(data-text);
@@ -53,15 +69,15 @@ h1{
 .box-mail{
     width: 220px;
     height: 220px;
-    background-color: #FFFDD0;
-    border: 10px solid #FFFDD0;
+    background-color: #FFFCF2;
+    border: 10px solid #FFFCF2;
     border-radius: 5%;
     position: relative;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px; /* add this */
+    margin: 0 auto 200px; /* add this */
     
 }
 .box-mail p{
@@ -86,8 +102,39 @@ h1{
 }
 
 @media only screen and (max-width: 600px) {
+    .rsvp-box{
+    align-self: center;
+    background-color: #FFFCF2;
+    text-align: center;
+    text-decoration: none;
+    color: #2c2c2c;
+}
+    .box{
+        margin: 0 auto 20px; /* add this */ 
+    }
     .container{
         display: block;
+        margin: 0 auto 20px; /* add this */
+    }
+    .container img{
+        display: none;
+
+    }
+    .box:hover::before{
+        display: none;
+    }
+    .box p{
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
     }
     h1{
         top: 1vh;
