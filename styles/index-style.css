@@ -3,7 +3,7 @@ body{
 
 }
 h1{
-    font-size:75px;
+    font-size:65px;
     position: relative;
     top: 0vh;
     text-align: center;
@@ -29,6 +29,7 @@ h1{
     color: #2c2c2c;
     margin-top: 0; /* Adjust as needed */
     padding: 10px; /* Adjust as needed */
+    margin-bottom: 27px;
   }
   
 .box {
