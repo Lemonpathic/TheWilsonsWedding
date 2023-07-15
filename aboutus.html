@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* CSS styles */
+        #grid1 {
+            position: relative;
+        }
+
+        #grid1 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("./images/temple.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        #grid1:hover .overlay {
+            opacity: 0.8;
+            visibility: visible;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./styles/about.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="rsvp.html">RSVP</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="registry.html">Registry</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div id="grid1">
+        <img src="images/cool_us.jpg" alt="Niv and I">
+        <div class="overlay"></div>
+    </div>
+    <div id="grid2">
+        <h1>How did we meet?</h1>
+        <h2>Nivea:</h2>
+        <p id="introsentance1">"Once upon an ordinary day, I...</p>
+        <div class="dropdown-trigger" onclick="toggleDropdown(1)">Read more</div>
+        <div id="dropdown-content1" class="dropdown-content">
+            <p>Once upon an ordinary day, I received an unexpected text message from President Magee. He presented me with an opportunity to participate in a service project at the Bishop's Storehouse, accompanied by some guy named Bryan Wilson. Though initially apprehensive about driving Bryan, little did I know that this encounter would set the stage for a delightful turn of events. As we took an hour drive, engaging in enjoyable conversations, a connection began to take shape and taking wrong turns. To my surprise, Bryan extended an invitation to join him attending the YSA ward. Days later that invitation was followed by a request to be his date for the Valentine's Day dance. And so, our love story began, unfolding in its own unique and lovely way.</p>
+        </div>
+
+        <h2>Bryan:</h2>
+        <p id="introsentance2">"Just a week after returning from my mission, I...</p>
+        <div class="dropdown-trigger" onclick="toggleDropdown(2)">Read more</div>
+        <div id="dropdown-content2" class="dropdown-content">
+            <p>Just a week after returning from my mission, I paid a visit to my Bishop to offer my assistance in any way possible. While he didn't require any immediate help, he imparted some unexpected advice: "Take Nivea Logan on a date to the temple." My initial thoughts were filled with hesitation, as I believed temple visits were reserved for those considering marriage, and I had no plans to tie the knot for another couple of years.</p>
+            <p>Fast forward another week, when President Magee approached me with an opportunity for a service project. He asked if I knew anyone who might be interested. As I searched my mind for suitable friends, no one came to mind, and we were about to end the call. One name emerged out of nowhere: Nivea Logan. Though I had no clue who she was, I remembered Bishop had briefly mentioned her before.</p>
+            <p>The service project unfolded, and I discovered that she was amazing. Impressed by her genuine awesomeness, I found myself continuously inviting her to join me in various activities. And then, one day, I mustered the courage to extend a particular invitation— 💍</p>
+        </div>
+
+        <h1>What's the temple for?</h1>
+        <p>The temple holds a special place in our hearts, as it has been intertwined with the significant milestones of our relationship right from the beginning. Our first dates took place in the temple grounds, where we built a strong foundation of love and spiritual connection. It represents a sacred space where we feel a deep sense of reverence and unity. The temple symbolizes our shared values, beliefs, and aspirations. </p>
+
+        <p> For us, a temple marriage is about more than just a wedding ceremony. It is about the eternal family we are creating. We believe in the concept of an eternal family, where our love and commitment extend beyond this mortal life. Through the blessings and ordinances performed in the temple, we seek to be sealed together for time and all eternity. This eternal bond not only strengthens our relationship in this life but also ensures that our family will be united throughout all eternity. The temple serves as a gateway to the eternities, where we can continue to progress and grow together as an eternal family.</p>
+        <h1>What has helped your family out?</h1>
+        <p>We value family! We want to make our home the best place for our future children and a place of love and righteousness. </p>
+        <p>"As for me and my house, we will serve the Lord" Joshua 24:15 KJV</p>
+        <p>We want to hear from you what you have done in your home to make it a house of love and order!</p>
+
+        <form action="https://formsubmit.co/signuponceforus@gmail.com" method="POST">
+            <textarea id="feedback" name="feedback" placeholder="Share your feedback"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="background-image"></div>
+</main>
+<script>
+    function toggleDropdown(dropdownNumber) {
+        const dropdownContent = document.getElementById(`dropdown-content${dropdownNumber}`);
+        dropdownContent.classList.toggle("active");
+
+        const introsentence = document.getElementById(`introsentance${dropdownNumber}`);
+        introsentence.style.display = introsentence.style.display === "none" ? "block" : "none";
+
+        const dropdownTrigger = document.querySelector(`#dropdown-content${dropdownNumber} + .dropdown-trigger`);
+        dropdownTrigger.textContent = introsentence.style.display === "none" ? "Read less" : "Read more";
+    }
+
+
+</script>
+</body>
+</html>

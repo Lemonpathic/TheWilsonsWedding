@@ -1,0 +1,97 @@
+body{
+    background-color: #a8bc92;
+}
+nav {
+    background-color: #FFFCF2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding:20px;
+
+}
+
+nav ul {
+    margin-right: 75px;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: larger;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6f9e66;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4c7945;
+}
+
+main {
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 75px ;
+}
+#grid1{
+    align-self: center;
+    margin-right: 50px;
+    justify-self: right;
+}
+#grid1 img{
+    width: 875px;
+    border-radius: 8px;
+}
+
+#grid2{
+    background-color: #FFFCF2;
+    border-radius: 8px;
+    padding: 15px;
+    margin-left: 50px;
+    justify-self: left;
+    margin-right: 36px;
+}
+
+#grid2 h1{
+    font-family: 'Geologica', serif;
+    margin: 0;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+}
+
+.dropdown-trigger::after {
+    content: "\25BE"; /* Unicode character for a downward-pointing triangle */
+    margin-left: 5px;
+}
+
+.dropdown-content.active {
+    display: block;
+}
+
+#feedback{
+    width: 80%;
+    height: 80px;
+}
